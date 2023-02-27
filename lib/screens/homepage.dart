@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym/fragments/usersection.dart';
-import '../constants.dart';
+import '../constants.dart' as constants;
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          appTitle,
+          constants.appTitle,
           style: Theme.of(context).textTheme.displayLarge,
         ),
         actions: [
@@ -28,28 +28,8 @@ class HomePage extends StatelessWidget {
           child: Expanded(
         child: Container(
           margin: const EdgeInsets.all(20),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Container(child: Text("User Section")),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              child: Row(children: [
-                Container(
-                  width: 120,
-                  height: 120,
-                  color: Colors.white54,
-                ),
-                SizedBox(
-                  width: 40,
-                ),
-                Container(
-                  width: 120,
-                  height: 120,
-                  color: Colors.white54,
-                )
-              ]),
-            )
-          ]),
+          child: UserSection()
+              
         ),
       )),
     );

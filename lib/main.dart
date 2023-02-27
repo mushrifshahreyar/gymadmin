@@ -14,7 +14,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+  
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -29,15 +29,19 @@ class MyApp extends StatelessWidget {
                   color: Colors.black87,
                   fontFamily: 'NotoSans',
                   fontSize: 26,
-                  fontWeight: FontWeight.w600),
+                  fontWeight: FontWeight.w600,),
               bodyLarge: TextStyle(
-                  fontFamily: 'NotoSans',
+                  fontFamily: 'SansPro',
                   color: Colors.black87,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w400))),
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22))),
       home: HomePage(
         key: key,
       ),
     );
   }
+}
+
+class Utils {
+  
 }
